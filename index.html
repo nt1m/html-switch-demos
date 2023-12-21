@@ -115,6 +115,7 @@
             <style>
 .sliding-track {
     appearance: none;
+    color: #000;
     overflow: hidden;
     height: 20px;
     width: 40px;
@@ -136,8 +137,7 @@
     font-size: 8px;
     margin: 1px;
     z-index: 2;
-    display: flex;
-    place-content: center;
+    text-align: center;
     width: 20px;
     height: 20px;
     font-weight: 600;
@@ -160,7 +160,7 @@
 
 .sliding-track::track {
     width: 80px;
-    background-image: linear-gradient(to right, #32d74b 50%, #98989d 50%);
+    background-image: linear-gradient(to right, #32d74b 50%, #ccd 50%);
     translate: -50%;
 }
 
@@ -173,7 +173,7 @@
     border-radius: 100%;
     width: 20px;
     height: 20px;
-    border: 1px solid #98989d;
+    border: 1px solid #bbf;
     box-sizing: border-box;
     transition: translate 0.4s;
     translate: 0;
@@ -182,8 +182,6 @@
 .sliding-track:checked::thumb {
     translate: 20px;
 }
-
-
             </style>
         </details>
     </section>
@@ -292,7 +290,63 @@
     transform: scale(0.5);
     transition-delay: 0s;
 }
+            </style>
+        </details>
+    </section>
+    <section class="example">
+        <h1>Toggle button</h1>
+        <input type="checkbox" switch class="toggle-button">
+        <details>
+            <summary>Show CSS</summary>
+            <style>
+.toggle-button {
+    appearance: none;
+    position: relative;
+    background-color: #ccd;
+    color: #000;
+    height: 40px;
+    width: 80px;
+    border-radius: 4px;
+    padding: 5px;
+    position: relative;
+}
 
+.toggle-button::thumb {
+    background: white;
+    height: 100%;
+    width: 50%;
+    border-radius: 2px;
+    transition: translate 0.3s;
+    z-index: 0;
+}
+
+.toggle-button:checked::thumb {
+    translate: 100%;
+}
+
+.toggle-button::before,
+.toggle-button::after {
+    position: absolute;
+    text-align: center;
+    width: 35px;
+    height: 100%;
+    line-height: 40px;
+    z-index: 2;
+}
+
+.toggle-button::before {
+    content: "OFF";
+    left: 5px;
+}
+
+.toggle-button::after {
+    content: "ON";
+    right: 5px;
+}
+
+.toggle-button:checked::after {
+    color: #007aff;
+}
             </style>
         </details>
     </section>
