@@ -10,13 +10,19 @@
     <h1>Switch demos</h1>
     <p>The markup for switches is <code>&lt;input type="checkbox" switch&gt;</code>. It comes built-in with <code>::thumb</code> and <code>::track</code> pseudo-elements. The <code>::before</code> and <code>::after</code> pseudo-elements can also be used for extra possibilities!</p>
 
-    <p>The switch control is enabled in <a href="https://developer.apple.com/safari/resources/">Safari Technology Preview</a> and the <code>::thumb</code> and <code>::track</code> pseudo-elements can be tested behind the relevant feature flag in <em>Develop > Feature Flags</em>. See <a href="https://developer.apple.com/documentation/safari-developer-tools/develop-menu">Apple's documentation</a> on how to enable the develop menu if you don't yet have it enabled.</p>
+    <p>The switch control is enabled in <a href="https://developer.apple.com/safari/resources/">Safari Technology Preview</a>.</p>
 
     <section class="example">
         <h1>Native switch (unstyled)</h1>
         <p>The native switch supports the <code>accent-color</code> and <code>color-scheme</code> CSS properties.</p>
         <input type="checkbox" switch>
     </section>
+
+    <div id="warning">
+        <p><b>Your browser does not support the <code>::thumb</code> and <code>::track</code> pseudo-elements.</b> The demos below will not render properly.</p>
+        <p>The pseudo-elements can be enabled in Safari Technology Preview behind the relevant feature flag in <em>Develop > Feature Flags</em>. See <a href="https://developer.apple.com/documentation/safari-developer-tools/develop-menu">Apple's documentation</a> on how to enable the develop menu if you don't yet have it enabled.</p>
+    </div>
+
     <section class="example">
         <h1>Basic styled switch</h1>
         <input type="checkbox" switch class="basic-switch">
