@@ -1,0 +1,24 @@
+:root {
+    color-scheme: light dark;
+    font-family: system-ui;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+style, code, pre {
+    font-family: Menlo, monospace;
+    font-size-adjust: 0.5;
+}
+
+.example details {
+    margin-top: 1em;
+}
+
+.example style {
+    display: block;
+    white-space: pre-wrap;
+}
