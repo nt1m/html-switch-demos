@@ -106,6 +106,86 @@
         </details>
     </section>
     <section class="example">
+        <h1>Sliding track</h1>
+        <input type="checkbox" switch class="sliding-track">
+        <details>
+            <summary>Show CSS</summary>
+            <style>
+.sliding-track {
+    appearance: none;
+    overflow: hidden;
+    height: 20px;
+    width: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.sliding-track::before,
+.sliding-track::after,
+.sliding-track::thumb,
+.sliding-track::track {
+    transition: translate linear 0.25s;
+}
+
+.sliding-track::before,
+.sliding-track::after {
+    position: absolute;
+    top: 4px;
+    font-size: 8px;
+    margin: 1px;
+    z-index: 2;
+    display: flex;
+    place-content: center;
+    width: 20px;
+    height: 20px;
+    font-weight: 600;
+}
+
+.sliding-track::before {
+    content: "ON";
+    left: -40px;
+}
+
+.sliding-track::after {
+    content: "OFF";
+    right: 0;
+}
+
+.sliding-track:checked::before,
+.sliding-track:checked::after {
+    translate: 40px;
+}
+
+.sliding-track::track {
+    width: 80px;
+    background-image: linear-gradient(to right, #32d74b 50%, #98989d 50%);
+    translate: -50%;
+}
+
+.sliding-track:checked::track {
+    translate: 0;
+}
+
+.sliding-track::thumb {
+    background-color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #98989d;
+    box-sizing: border-box;
+    transition: translate 0.4s;
+    translate: 0;
+}
+
+.sliding-track:checked::thumb {
+    translate: 20px;
+}
+
+
+            </style>
+        </details>
+    </section>
+    <section class="example">
         <h1>Daylight switch</h1>
         <input type="checkbox" switch class="daylight-switch">
         <details>
